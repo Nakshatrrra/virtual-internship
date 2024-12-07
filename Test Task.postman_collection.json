@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "ed1bab35-ea37-4493-9032-46c99cc46749",
+		"name": "Test Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26927951",
+		"_collection_link": "https://lunar-star-357370.postman.co/workspace/Virtual-internships~5a74b1de-c503-4e01-b623-c90cadae9e59/collection/26927951-ed1bab35-ea37-4493-9032-46c99cc46749?action=share&source=collection_link&creator=26927951"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Naksh Trivedi\",\r\n  \"email\": \"naksh@example.com\",\r\n  \"password\": \"naksh\",\r\n  \"role\":\"mentor\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/register",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzNTk5MDQ4LCJleHAiOjE3MzM2ODU0NDh9.Y5HUPWJIk0IBeIv9-9X622e0krsdFdKn2tiYqrAJCVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Naksh Trivedi\",\r\n  \"skills\": [\"MERN\", \"Web D\"],\r\n  \"interests\": [\"Maths\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"naksh@example.com\",\r\n  \"password\": \"naksh\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzNTk5MDQ4LCJleHAiOjE3MzM2ODU0NDh9.Y5HUPWJIk0IBeIv9-9X622e0krsdFdKn2tiYqrAJCVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/logout",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile by auth code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzNTk5MDQ4LCJleHAiOjE3MzM2ODU0NDh9.Y5HUPWJIk0IBeIv9-9X622e0krsdFdKn2tiYqrAJCVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzNTk5MDQ4LCJleHAiOjE3MzM2ODU0NDh9.Y5HUPWJIk0IBeIv9-9X622e0krsdFdKn2tiYqrAJCVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/users",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mentor Mentee",
+			"item": [
+				{
+					"name": "Match",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/matches/mentor?menteeId=3",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"matches",
+								"mentor"
+							],
+							"query": [
+								{
+									"key": "menteeId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:5000"
+		}
+	]
+}
